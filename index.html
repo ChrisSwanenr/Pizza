@@ -2,9 +2,96 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Pizza Pies</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+     <link rel="stylesheet" href="css/styles.css" type="text/css">
+     <script src="js/jquery-3.3.1.js"></script>
+     <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Panucci's Pizza</title>
   </head>
   <body>
-
+    <div class="jumbotron">
+        <h1>Panucci's Pizza</h1>
+        <h2>Come On!</h2>
+      </div>
+      <div class="container">
+        <div class="create-order">
+          <h3>Order Now!</h3>
+          <button type="button" class="btn btn-info">Begin Order</button>
+        </div>
+        <div id="info">
+        <div class="order-input hideAtStart">
+          <h3>Enter your information.</h3>
+          <form>
+            <div class="form-group">
+              <label for="customer-name">Name: </label>
+              <input id="customer-name" type="text" placeholder="Fry Farnsworth">
+            </div>
+            <div class="form-group">
+              <label for="customer-street">Address: </label>
+              <input id="customer-street" type="text" placeholder="123 57th Street">
+            </div>
+            <div class="form-group">
+              <label for="customer-city">City: </label>
+              <input id="customer-city" type="text" placeholder="New New York">
+            </div>
+            <div class="form-group">
+              <label for="customer-zip-code">Zip Code: </label>
+              <input id="customer-zip-code" type="text" placeholder="30103">
+            </div>
+            <div class="form-group">
+              <label for="customer-phone">Phone Number: </label>
+              <input id="customer-phone" type="text" placeholder="555-555-5555">
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+      </div>
+        <div class="order-pizza-input hideAtStart">
+          <h3>Add a pizza to your order.</h3>
+          <form>
+            <div class="size form-group">
+              <h4>Pizza Size:</h4><hr>
+              <label class="checkbox-inline"><input type="radio" name="pie-size" value="small"> Small ($10)</label>
+              <label class="checkbox-inline"><input type="radio" name="pie-size" value="medium" checked> Medium ($12)</label>
+              <label class="checkbox-inline"><input type="radio" name="pie-size" value="large"> Large ($15)</label>            </div>
+            <div class="meat-toppings  form-group"><hr>
+              <h4>Meats: ($2.00 each) </h4>
+              <label class="checkbox-inline">
+                <input type="checkbox" name="meat-toppings" value="Pepperoni">Pepperoni
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" name="meat-toppings" value="Dog">Dog
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" name="meat-toppings" value="Ham">Ham
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" name="meat-toppings" value="Cat">Cat
+              </label>
+            </div>
+            <div class="cheese  form-group"><hr>
+              <h4>Cheese:</h4>
+              <label class="checkbox"><input type="radio" name="cheese-options" value="regular" checked>  Regular</label>
+              <label class="checkbox"><input type="radio" name="cheese-options" value="extra">  Extra Cheese <em>(add $1)</em></label>
+              <label class="checkbox"><input type="radio" name="cheese-options" value="none">  No Cheese</label>
+            </div><hr>
+            <button type="submit" class="btn btn-success">Add Pizza</button>
+          </form>
+        </div>
+        <div class="order-summary hideAtStart">
+          <h3>Your order.</h3>
+          <p>Click on a pizza to view and hide more information.</p>
+          <div class="pizza-list"></div>
+          <h3>Total Cost: <span id="pizza-list-total-cost"></span></h3>
+          <button id="checkout-order" class="btn btn-success">Checkout Out</button>
+        </div>
+        <div class="checked-out  hideAtStart">
+          <h3>Your order is on its way!</h3>
+          <p>Click below to place a new order.</p>
+          <button type="button" class="btn btn-success" id="new-order">New Order</button>
+        </div>
+      </div>
   </body>
 </html>
