@@ -9,9 +9,15 @@
 A site that mimics a real pizza ordering website
 _Github repository can be found at:_ https://github.com/joelaphoto/pizza/
 
-## Specifications
-
-NOT REALLY
+## Specs
+_This web app will take a users pizza order and return all the information given.
+---
+* Take a name and address
+    * Return both in a list
+* gather ingredients through checkboxes and drop downs
+    * list the full pizza with all of the ingredients.
+* offer an option to order a new pizza.
+ 
 
 ## Setup/Installation Requirements
 
